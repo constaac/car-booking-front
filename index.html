@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My first page</title>
+
+  <!-- Do not add `script` tags unless you know what you are doing -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+</head>
+
+<body>
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-inverse" class="nav">
+    <div class="container-fluid">
+      <div class="navbar-header" class="hed">
+        <h1>BOOK YOUR CAR</h1>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a id="sign-up-btn" href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a id="login-btn" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a id="changePassword-btn" href="#"><span class="glyphicon glyphicon-log-in"></span> change-password</a></li>
+        <li><a id="sign-out-btn" href="#"><span class="glyphicon glyphicon-user"></span> Sign-out</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- End : Nav bar -->
+  <!-- Main content-->
+  <div class="container">
+    <!-- row -->
+    <div class="row">
+      <div class="col-md-4">
+      </div>
+
+      <div class="col-md-4">
+
+        <!-- Login form-->
+
+        <form id="sign-in">
+          <h2>Login</h2>
+          <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" name="credentials[email]" class="form-control" id="email">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" name="credentials[password]" class="form-control" id="pwd">
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" class="sin">Login</button>
+        </form>
+        <!-- </div> -->
+        <!-- End :Login form-->
+
+        <!-- sign-up form-->
+
+        <form id="sign-up">
+          <h2>Signup</h2>
+          <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" name="credentials[email]" class="form-control" id="email">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" name="credentials[password]" class="form-control" id="pwd">
+          </div>
+          <div class="form-group">
+            <label for="pwd">ConfirmPassword:</label>
+            <input type="password" name="credentials[password_confirmation]" class="form-control" id="pwd">
+          </div>
+          <button type="submit" class="btn btn-success btn-block">Sign Up</button>
+        </form>
+        <!-- End :Signup form-->
+
+        <!---change password form begins here -->
+        <form id="change-password">
+          <h2>CHANGE PASSWORD</h2>
+          <div class="form-group">
+            <label for="pwd"> Old-Password:</label>
+            <input type="password" name="passwords[old]" class="form-control" id="pwd">
+          </div>
+          <div class="form-group">
+            <label for="pwd">New-Password:</label>
+            <input type="password" name="passwords[new]" class="form-control" id="pwd">
+          </div>
+          <button type="submit" class="btn btn-info btn-block ">Submit</button>
+        </form>
+      </div>
+      <!-- end of the  container which is starting at sign-in-->
+      <!-- change passwordform ends here -->
+
+      <div id="updatemsg">
+        <div class="alert alert-success alert-dismissable" id="success">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>Success!</strong> <span id="succmsg"></span>
+        </div>
+
+        <div class="alert alert-danger alert-dismissable" id="error">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>try again!</strong><span id="errmsg"></span>
+        </div>
+
+      </div>
+
+
+      <div class="container">
+        <!--getAllCars div begins-->
+          <button id="allcars" class="btn btn-default"><span class="glyphicon glyphicon-ok"></span>CARS-LIST</button>
+        <div id="alcr" class="col-md-6" class='msg'>
+          <!--show button to show cars grid starts-->
+
+        </div>
+
+        <!-- add a button that will be visible after  the submit button for cardtl is click-->
+        <div>
+
+          <button id="crtnewcar" class="btn btn-default"><span class="glyphicon glyphicon-ok"></span>add another car</button>
+        </div>
+        <!--show button to show carsgrid ends-->
+        <!--customer  form  to enter his car details begins-->
+        <div class="col-md-6" class="empfor">
+          <form id="cardtl">
+            <h1>Enter your car detail</h1>
+            <div class="form-group">
+              <label for="crmd">Car-Model</label>
+              <input type="text" name="car[model]" class="form-control" id="Crmd">
+            </div>
+            <div class="form-group">
+              <label for="coc">Color-of-car</label>
+              <input type="text" name="car[color]" class="form-control" id="coc">
+            </div>
+            <div class="form-group">
+              <label for="lpn">licence-plate-no</label>
+              <input type="text" name="car[lcp]" class="form-control" id="lpn">
+            </div>
+            <div class="form-group">
+              <label for="rpnd">Repair-needed</label>
+              <input type="text" name="car[repair]" class="form-control" id="rpnd">
+            </div>
+            <button id="updt" type="submit" class="btn btn-info btn-block ">Submit</button>
+          </form>
+        </div>
+      </div>
+      <!--customer detail form to enter his car detailends-->
+
+      <!--edit formm-->
+
+    </div>
+    <div class="col-md-2">
+      &nbsp;
+      <!-- Right Bar -->
+    </div>
+  </div>
+
+</body>
+
+</html>
